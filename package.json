@@ -1,0 +1,40 @@
+{
+  "name": "bigtime",
+  "author": "captsolo",
+  "version": "1.0.0",
+  "keywords": ["pebble-app"],
+  "private": true,
+  "dependencies": {},
+  "pebble": {
+    "displayName": "BigTime",
+    "uuid": "d68a1811-d2dc-49f9-9c41-80b56886b4b5",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+      "emery"
+    ],
+    "watchapp": {
+      "watchface": true
+    },
+    "messageKeys": [
+      "TEMPERATURE",
+      "CONDITIONS"
+    ],
+    "resources": {
+      "media": [
+        {
+          "type": "bitmap",
+          "name": "MENU_ICON",
+          "file": "images/menu_icon.png",
+          "menuIcon": true
+        },
+        {
+          "type": "font",
+          "name": "FONT_ROBOTO_BOLD_56",
+          "file": "fonts/Roboto-Bold.ttf",
+          "characterRegex": "[0-9:]"
+        }
+      ]
+    }
+  }
+}
