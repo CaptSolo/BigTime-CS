@@ -46,6 +46,13 @@ static void prv_update_time(struct tm *tick_time) {
 }
 
 static void prv_update_steps(void) {
+  time_t start = time_start_of_today();
+  time_t end = time(NULL);
+  if (!(health_service_metric_accessible(HealthMetricStepCount, start, end) &
+        HealthServiceAccessibilityMaskAvailable)) {
+    text_layer_set_text(s_steps_layer, "-");
+    return;
+  }
   HealthValue steps = health_service_sum_today(HealthMetricStepCount);
   int s = (int)steps;
   if (s >= 1000) {
