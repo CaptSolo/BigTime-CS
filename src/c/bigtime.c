@@ -66,6 +66,7 @@ static void prv_request_weather(void) {
 
 static void prv_tick_handler(struct tm *tick_time, TimeUnits units_changed) {
   prv_update_time(tick_time);
+  prv_update_steps();
   if (++s_minutes_since_weather >= 30) {
     s_minutes_since_weather = 0;
     prv_request_weather();
