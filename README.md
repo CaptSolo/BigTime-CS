@@ -1,15 +1,16 @@
-# BigTime
+# BigTime CS
 
 A bold, colorful watchface for the **Pebble Time 2** (emery, 200×228 64-color
 display), written in C with a PebbleKit JS companion for weather.
 
-![BigTime watchface](screenshot.png)
+![BigTime CS watchface](screenshot.png)
 
 ## Layout
 
 - **Yellow top band** — weekday and date (`FRIDAY · JUL 10`)
 - **Center** — the time in custom Roboto Bold at 56 px on black
-- **Green block** — today's step count from the Pebble Health service
+- **Green block** — today's step count from the Pebble Health service (`-`
+  when health data isn't available)
 - **Blue block** — current temperature (°C) and conditions
 
 ## Weather
@@ -24,11 +25,10 @@ block shows `LOADING`.
 ## Building & running
 
 Requires [pebble-tool](https://developer.repebble.com/sdk/) (Python ≤ 3.13).
-This repo assumes a virtualenv at `../.venv` with `pebble-tool` installed and
-`pebble sdk install latest` already run.
+Install it in a virtualenv and run `pebble sdk install latest` once.
 
 ```sh
-source ../.venv/bin/activate
+source /path/to/venv/bin/activate
 pebble build
 pebble install --emulator emery       # run in the emulator
 pebble screenshot --emulator emery    # grab a screenshot
@@ -67,3 +67,9 @@ package.json         Project metadata (UUID, platform, resources, message keys)
   `time_font_h` in the C to match.
 - **Units**: Open-Meteo returns °C by default; add
   `&temperature_unit=fahrenheit` to the URL in `src/pkjs/index.js` for °F.
+
+## License
+
+Code is released under the [MIT License](LICENSE). The bundled Roboto Bold font
+is © Google, licensed under the Apache License 2.0 — see
+[`resources/fonts/LICENSE.txt`](resources/fonts/LICENSE.txt).

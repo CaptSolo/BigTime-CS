@@ -1,12 +1,12 @@
 {
-  "name": "bigtime",
-  "author": "captsolo",
+  "name": "bigtime-cs",
+  "author": "Uldis Bojars",
   "version": "1.0.0",
   "keywords": ["pebble-app"],
   "private": true,
   "dependencies": {},
   "pebble": {
-    "displayName": "BigTime",
+    "displayName": "BigTime CS",
     "uuid": "d68a1811-d2dc-49f9-9c41-80b56886b4b5",
     "sdkVersion": "3",
     "enableMultiJS": true,
