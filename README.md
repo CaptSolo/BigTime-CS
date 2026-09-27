@@ -46,7 +46,7 @@ pebble logs --cloudpebble             # tail JS/app logs from the phone
 ```
 
 Alternative: `pebble install --phone <ip>` over local Wi-Fi, or open
-`build/bigtime.pbw` with the Pebble app on your phone.
+`build/BigTime-CS.pbw` with the Pebble app on your phone.
 
 ## Project layout
 
